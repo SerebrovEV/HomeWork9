@@ -10,5 +10,7 @@ public class App {
         System.out.println(secondBook.getNameBook() + ". " + secondBook.getAuthorName(secondBook) + ". " + secondBook.getYearOfPublication());
         firstBook.setYearOfPublication(2022);
         System.out.println(firstBook.getYearOfPublication());
+        String bookFirstInfo = firstBook.toString();
+        System.out.println(bookFirstInfo);
     }
     }

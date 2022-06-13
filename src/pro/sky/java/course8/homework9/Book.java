@@ -1,5 +1,7 @@
 package pro.sky.java.course8.homework9;
 
+import java.util.Objects;
+
 public class Book {
     private String nameBook;
     private Author author;
@@ -30,5 +32,29 @@ public class Book {
         this.yearOfPublication = yearOfPublication;
     }
 
+   // public String toStringBook() {
+    //    return nameBook + ", " + yearOfPublication + ".";
+   // }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return yearOfPublication == book.yearOfPublication && nameBook.equals(book.nameBook) && author.equals(book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameBook, author, yearOfPublication);
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "nameBook='" + nameBook + '\'' +
+                ", author=" + getAuthor().getNameAuthor() + " " + getAuthor().getSurnameAuthor() +
+                ", yearOfPublication=" + yearOfPublication +
+                '}';
+    }
 }
