@@ -17,9 +17,4 @@ public class Author {
         return surnameAuthor;
     }
 
-   // public String toStringAuthor() {
-    //    return surnameAuthor + " " + nameAuthor + ". ";
-   // }
-
-
 }
